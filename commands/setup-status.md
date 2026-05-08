@@ -1,0 +1,77 @@
+---
+description: Configure client-status for your cadence, voice match, status template, per-client overrides, and delivery channel. Re-run anytime to update.
+---
+
+# /setup-status
+
+Short interview that captures what client-status needs to draft useful updates.
+
+---
+
+## Pre-step — Read shared identity and voice (if available)
+
+Check `~/Documents/Claude/identity.md` for company/role and `~/Documents/Claude/voice.md` for voice descriptors. If both populated, you have most of what's needed for tone — only ask about cadence and delivery.
+
+---
+
+## Step 1 — Cadence and timing
+
+- **Cadence** — weekly / bi-weekly / monthly (default weekly)
+- **Day to send** — Friday afternoon / Monday morning / other (default Friday)
+- **Time of day** — when do you typically have 30 min to review and send? (e.g., Friday 2pm)
+
+---
+
+## Step 2 — Status template
+
+The plugin ships with a starter template at `references/templates/status-template.md`. The default structure: What we did / What we learned / What's next / Anything we need from you.
+
+Ask:
+- Want to use the default template, or customize it now? (most users start default and refine over time)
+- If customize: walk through which sections to add/remove/reorder
+
+---
+
+## Step 3 — Per-client overrides (optional)
+
+Some clients prefer different formats. Ask:
+- Any clients that want a longer / shorter / different format? (capture per-client overrides)
+- Any clients that should be EXCLUDED from automatic drafting? (e.g., a client who prefers no weekly updates)
+
+If user has `project-setup` installed and wants to use those engagements, walk through each active engagement to capture overrides.
+
+---
+
+## Step 4 — Optional inclusions
+
+- **Time-tracking hours** — if `time-tracking` plugin is installed, do you want hours logged per client included in the update? (Y/N, default N — most clients don't need that level of transparency)
+- **Thought-leadership shares** — should drafts include a "relevant share" section (an article / framework / insight tied to their work)? (Y/N, default N)
+- **Auto-send** — leave default off. The plugin always drafts and waits for review. (Documented for clarity, not configurable.)
+
+---
+
+## Step 5 — Delivery channel
+
+- **Channel** — email (default) / Slack DM / client portal / Drive folder upload / other
+- **Per-client channel overrides** — some clients prefer different channels
+
+---
+
+## Step 6 — Write config
+
+Populate `references/user-context.md` per the template structure.
+
+---
+
+## Step 7 — Confirm and offer next step
+
+Summarize. Offer:
+> "Try `/client-status` Friday afternoon to see drafts for all active engagements."
+
+---
+
+## Behavior rules
+
+- One section at a time.
+- Skip what doesn't apply.
+- Idempotent — re-running updates fields without resetting everything.
