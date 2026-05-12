@@ -7,7 +7,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versions match `
 ## [0.2.0] — Config-root refactor
 
 ### Changed
-- **Plugin config moved to a user-chosen folder.** Reads/writes now go to `<config-root>/plugins/client-status.user-context.md` via the pointer at `~/.claude-plugin-config-root`.
+- **Plugin config moved to a user-chosen folder.** Reads/writes now go to `<config-root>/plugins/client-status.user-context.md` via the pointer at `~/Documents/.claude-plugin-config-root`.
 - **`/setup-status` Step 0 bootstraps the config root** and reads shared identity + voice.
 - **`/client-status` updated** to read from the new path.
 - **User-facing prompts debranded** for fork-friendliness.
