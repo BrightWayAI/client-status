@@ -13,7 +13,7 @@ See `commands/client-status.md` for the full workflow.
 
 ## Pre-flight
 
-Confirm `references/user-context.md` exists. If missing, route to `/setup-status`.
+Confirm `<config-root>/plugins/client-status.user-context.md` exists. If missing, route to `/setup-status`.
 
 Best results require `claude-cortex` (for memory) and `project-setup` (for engagement data) installed. Without them, drafts work but are thinner.
 

@@ -10,7 +10,7 @@ Weekly client status update drafting. The plugin reads everything you already ha
 
 ## Step 0 — Preflight
 
-Read `references/user-context.md`. If missing, route to `/setup-status` and stop. Read shared identity at `~/Documents/Claude/identity.md` and shared voice at `~/Documents/Claude/voice.md`.
+Read `<config-root>/plugins/client-status.user-context.md`. If missing, route to `/setup-status` and stop. Read shared identity at `~/Documents/Claude/identity.md` and shared voice at `~/Documents/Claude/voice.md`.
 
 Extract from this plugin's user-context:
 - Cadence (weekly / bi-weekly / monthly)
