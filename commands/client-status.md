@@ -132,6 +132,23 @@ If yes: add a CHANGELOG entry to each client's memory node ("Sent weekly status 
 
 ---
 
+## Step 6 — Person-page side effect (cortex v4.2+)
+
+After the user confirms a status update was sent (or, optionally, when a draft is produced), update the primary contact's person page if it exists.
+
+For each engagement's primary contact (from project-setup's user-context if present, or the most-engaged contact in CRM):
+
+1. Resolve `<config-root>` via the standard pointer.
+2. Compute slug: `firstname-lastname`.
+3. **If `<config-root>/memory/person/<slug>.md` exists** → append a line to **## Recent interactions**:
+   `<today> — status-update-sent — week of <week-start>: <one-line on highlights or theme>` (or `status-update-drafted` if Step 5's send-confirmation was skipped).
+   Update **Last meaningful contact** in Relationship. Update Relationship temperature toward Active if it had drifted to Warm/Cold.
+4. **If the page does NOT exist** → do nothing. This plugin doesn't graduate new pages.
+
+If cortex isn't installed, skip silently.
+
+---
+
 ## Behavior rules
 
 - **Don't auto-send.** Always review-then-send. The plugin drafts; the user delivers.

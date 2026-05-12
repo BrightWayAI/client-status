@@ -4,6 +4,15 @@ All notable changes to client-status are documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/). Versions match `plugin.json`.
 
+## [0.2.4] — Person-page side effect on status updates (2026-05-12)
+
+### Added
+- **`/client-status` Step 6 — person-page Recent-interactions append.** After the user confirms a status update was sent (or when a draft is produced if send-confirmation was skipped), append a `<today> — status-update-sent — week of <week-start>: <highlights>` line to the primary contact's cortex person page if one exists at `<config-root>/memory/person/<slug>.md`. Updates Last meaningful contact and refreshes Relationship temperature toward Active.
+- **Graceful degradation.** No-op if cortex isn't installed or the contact has no graduated page.
+
+### Why this matters
+Phase 3 of SECOND-BRAIN-V2-SPEC. The weekly cadence of client status updates is one of the strongest relationship-heartbeat signals available — and previously it left no trail at the person-page level. This side effect makes the relationship's regular rhythm visible on the canonical page.
+
 ## [0.2.3] — Platform-agnostic Step 0 (2026-05-12)
 
 ### Changed
