@@ -1,6 +1,6 @@
 {
   "name": "client-status",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Weekly client status updates auto-generated from cortex memory, project-setup engagement data, and calendar. Drafts ready-to-send updates per active engagement (what we did, what we learned, what's next, anything you need from us). Retention compounds when clients feel informed; this makes it nearly automatic.",
   "author": {
     "name": "BrightWay AI"
